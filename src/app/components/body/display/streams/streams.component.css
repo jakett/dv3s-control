@@ -1,0 +1,59 @@
+.streams-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 20px;
+    border-bottom: 2px solid white;
+    color: var(--white-text);
+}
+
+.streams-header > p {
+    margin: 0px;
+}
+
+.streams-body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: calc(100% - 22px);
+}
+
+.streams-body .live, .streams-body .vod {
+    flex: 1;
+}
+
+.streams-body .live,
+.streams-body .vod {
+    position: relative;
+}
+
+.streams-body .title {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 10px 0;
+    padding-left: 10px;
+    color: white;
+}
+
+.streams-body .live .title {
+    background-color: var(--green);
+}
+
+.streams-body .vod .title {
+    background-color: var(--yellow);
+}
+
+.streams-body .content {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+.streams-body .loader-container {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

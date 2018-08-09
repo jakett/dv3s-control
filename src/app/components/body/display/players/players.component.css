@@ -10,3 +10,7 @@
     margin: 0px;
     color: var(--white-text);
 }
+
+.players-body {
+    height: calc(100% - 22px);
+}

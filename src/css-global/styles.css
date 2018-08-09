@@ -19,6 +19,7 @@ app-header {
     display: flex;
     flex-flow: column nowrap;
     height: 90px;
+    z-index: 2;
 }
 
 app-global-bar {
@@ -28,6 +29,7 @@ app-global-bar {
 
 app-body {
     height: calc(100% - 190px);
+    z-index: 1;
 }
 
 app-display, app-setting {
@@ -58,4 +60,30 @@ app-players {
 app-footer {
     min-height: 100px;
     background-color: var(--panther-bg);
+    z-index: 2;
+}
+
+/* -------------------- Default -------------------- */
+
+.loader {
+    position: absolute;
+    border: 5px solid rgba(243, 243, 243, 0.75);
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 5px solid #555;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
