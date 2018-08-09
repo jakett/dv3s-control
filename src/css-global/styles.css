@@ -1,0 +1,61 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+app-root {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+app-header {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 90px;
+}
+
+app-global-bar {
+    min-height: 40px;
+    background-color: var(--panther-bg);
+}
+
+app-body {
+    height: calc(100% - 190px);
+}
+
+app-display, app-setting {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+app-display {
+    background-color: var(--panther-bg);
+}
+
+app-streams {
+    flex: 2;
+    margin-right: 3px;
+    background-color: black;
+    padding: 5px;
+}
+
+app-players {
+    flex: 3;
+    margin-left: 3px;
+    background-color: black;
+    padding: 5px;
+}
+
+app-footer {
+    min-height: 100px;
+    background-color: var(--panther-bg);
+}

@@ -1,0 +1,12 @@
+.players-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 20px;
+    border-bottom: 2px solid white;
+}
+
+.players-header > p {
+    margin: 0px;
+    color: var(--white-text);
+}

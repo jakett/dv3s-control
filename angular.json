@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/css-global/styles.css",
+              "src/css-global/constant.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js-global/library.js"    
+            ]
           },
           "configurations": {
             "production": {
