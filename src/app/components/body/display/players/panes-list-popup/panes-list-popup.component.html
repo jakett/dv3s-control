@@ -1,0 +1,9 @@
+<div class="panes-list-popup-container" *ngIf="player.show_popup">
+	<div *ngFor="let panes of panesList; let idx = index" class="panes" [ngClass]="{'active': idx==player.active_panes_idx}" (click)="activePanes($event, idx);">
+		<div *ngFor="let pane of panes;" class="pane" 
+			[style.width]="pane.layout.w" 
+			[style.height]="pane.layout.h" 
+			[style.top]="pane.layout.t" 
+			[style.left]="pane.layout.l"></div>
+	</div>
+</div>

@@ -21,11 +21,10 @@ export class StreamsComponent implements OnInit {
         this.streamsService.getChannels().subscribe(function(channels) {
             for(let channel of channels) {
                 console.log("JJJJJJ channels.channelId = " + channel.channelId);
+                this.streamService.getStreams(channel.channelId).subscribe(function(streams) {
+                    console.log("NNNNNN streams = JSON.stringify(streams)");
+                })
             }
-        
-           // this.streamService.getStreams(channels.channelId).subscribe(function(streams) {
-            //    console.log("NNNNNN streams = JSON.stringify(streams));
-        //    });
         });
     }
 }

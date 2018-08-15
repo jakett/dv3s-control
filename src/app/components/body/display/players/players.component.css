@@ -13,4 +13,80 @@
 
 .players-body {
     height: calc(100% - 22px);
+    overflow: auto;
+}
+
+.players-body .player-item {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 5px;
+}
+
+.player-item {
+	margin-bottom: 10px;
+}
+
+.player-item .title {
+	display: flex;
+	flex-flow: row nowrap;
+    height: 40px;
+    background-color: var(--panther-bg);
+    color: var(--white-text);
+    z-index: 1;
+    margin-bottom: 2px;
+    padding: 0 10px;
+}
+
+.player-item .title .text {
+	display: inline-flex;
+	align-items: center;
+	min-width: 200px;
+	height: 100%;
+	font-size: 16px;
+}
+
+.player-item .title .buttons {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	align-items: center;
+	margin-left: auto;
+	min-width: 200px;
+	height: 100%;
+}
+
+.player-item .title .buttons .button {
+	position: relative;
+	min-width: 100px;
+	height: calc(100% - 10px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px 5px;
+	border-radius: 5px;
+	background-color: var(--greyhound-bg);
+	cursor: pointer;
+}
+
+.player-item .title .buttons .button:HOVER,
+.player-item .title .buttons .button.active {	
+	background-color: var(--shark-bg);
+	color: var(--blue);
+}
+
+.player-item .title .buttons > div > i {
+	font-size: 16px;
+}
+
+
+.player-item .panes {
+    position: relative;
+    display: flex;
+    height: 200px;
+    z-index: 0;
+}
+
+.panes .panes-item {
+    position: absolute;
+    background-color: var(--panther-bg);
+    outline: 2px solid black;
 }

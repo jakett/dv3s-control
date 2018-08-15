@@ -1,0 +1,33 @@
+.panes-list-popup-container {
+	position: absolute;
+	max-width: 150px;
+	background-color: var(--panther-bg);
+	top: calc(100% + 5px);
+	left: -50%;
+	padding: 10px;
+	box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+	border-top: 2px solid var(--blue);
+	display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.panes {
+	position:relative;
+	min-width: 40px;
+	min-height: 24px;
+	border: 1px solid var(--tuna-bg);
+	margin: 3px;
+}
+
+.panes.active .pane {
+	background-color: var(--blue);
+}
+
+.pane {
+    position: absolute;
+    display: block;
+    background-color: var(--greyhound-bg);
+    outline: 1px solid var(--tuna-bg);
+    color: black;
+}

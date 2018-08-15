@@ -13,6 +13,7 @@ import { PlayersComponent }     from './components/body/display/players/players.
 import { SettingComponent }     from './components/body/setting/setting.component';
 import { FooterComponent }      from './components/footer/footer.component';
 
+import { PanesListPopupComponent } from './components/body/display/players/panes-list-popup/panes-list-popup.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FooterComponent }      from './components/footer/footer.component';
     StreamsComponent,
     PlayersComponent,
     SettingComponent,
-    FooterComponent
+    FooterComponent,
+    PanesListPopupComponent
   ],
   imports: [
     BrowserModule,
