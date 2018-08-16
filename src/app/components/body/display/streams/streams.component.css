@@ -47,6 +47,23 @@
     position: absolute;
     width: 100%;
     height: calc(100% - 40px);
+    color: var(--white-text);
+    overflow: hidden;
+}
+
+.streams-body .content .item {
+	padding: 10px;
+	background-color: var(--panther-bg);
+	cursor: pointer;
+}
+
+.streams-body .content .item:HOVER {
+	background-color: var(--shark-bg);
+	color: var(--blue);
+}
+
+.streams-body .content .item:NOT(:LAST-CHILD) {
+	border-bottom: 0.05px solid var(--koala);
 }
 
 .streams-body .loader-container {

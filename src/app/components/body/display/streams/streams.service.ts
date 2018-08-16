@@ -33,7 +33,7 @@ export class StreamsService {
         };
     }
 
-    getChannels(): Observable<Channel[]> {
+    getChannels(): Observable<any> {
         return this.http.get<Channel[]>(this.origin + '/channels')
             .pipe(
                 tap(channels => console.log('fetched channels')),

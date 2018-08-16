@@ -1,7 +1,8 @@
 import {Component, OnInit, OnDestroy, Input, SimpleChanges, OnChanges} from '@angular/core';
 
-import { PlayersService } from './players.service';
-import { Player } from '../../../../objects/player';
+import { PlayersService }   from './players.service';
+import { UtilService }      from '../../../../commons/services/util.service';
+import { Player }           from '../../../../objects/player';
 
 @Component({
     selector: 'app-players',
@@ -16,10 +17,16 @@ export class PlayersComponent implements OnInit, OnDestroy, OnChanges {
     private player2: Player = new Player();
 
     players: any[];
+    scrollbarOptions;
 
-    constructor(private playersService: PlayersService) {}
+    constructor(
+        private playersService: PlayersService,
+        private utilService: UtilService
+    ) {}
 
     ngOnInit(): void {
+        this.scrollbarOptions = this.utilService.getScrollbarOptions();
+
         this.player1['panes'] = this.playersService.getPanesList()[1];
         this.player1['active_panes_idx'] = 1;
         this.player1['show_popup'] = false;

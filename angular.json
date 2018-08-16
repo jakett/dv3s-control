@@ -25,10 +25,12 @@
             "styles": [
               "src/css-global/styles.css",
               "src/css-global/constant.css",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
             ],
             "scripts": [
-              "src/js-global/library.js"    
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"    
             ]
           },
           "configurations": {

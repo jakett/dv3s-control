@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -52,11 +51,11 @@ export class PlayersService {
         this.activePanesIdx = newValue;
         this.activePanes = this.panesList[newValue];
     }
-  
+
     getActivePanes(): any[] {
         return this.activePanes;
     }
-  
+
     setActivePanes(newValue: any[]) {
         this.activePanes = newValue;
     }

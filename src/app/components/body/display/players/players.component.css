@@ -13,7 +13,7 @@
 
 .players-body {
     height: calc(100% - 22px);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .players-body .player-item {
@@ -22,7 +22,7 @@
     margin-top: 5px;
 }
 
-.player-item {
+.players-body .player-item:NOT(:LAST-CHILD) {
 	margin-bottom: 10px;
 }
 
