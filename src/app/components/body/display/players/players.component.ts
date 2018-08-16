@@ -9,7 +9,7 @@ import { Player }           from '../../../../objects/player';
     templateUrl: './players.component.html',
     styleUrls: ['./players.component.css']
 })
-export class PlayersComponent implements OnInit, OnDestroy, OnChanges {
+export class PlayersComponent implements OnInit, OnChanges {
 
     @Input() panes: any;
 
@@ -43,10 +43,6 @@ export class PlayersComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        throw new Error('Method not implemented.');
-    }
-
-    ngOnDestroy(): void {
         throw new Error('Method not implemented.');
     }
 
