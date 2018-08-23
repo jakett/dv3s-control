@@ -1,0 +1,30 @@
+.pane-container {
+	position: relative;
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+	background-color: var(--panther-bg);
+	cursor: pointer;
+}
+
+.mode-indicator {
+	position: absolute;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.mode-indicator.active {
+	border: 2px solid var(--white-text);
+}
+
+.fa-circle {
+	color: var(--white-text);
+}
+
+.fa-plus {
+	color: var(--panther-bg);
+}

@@ -1,0 +1,9 @@
+<div class="pane-container" (click)="activePane($event)">
+	<div class="mode-indicator"
+		[ngClass]="{'active': index === player.active_pane_idx}">
+		<span class="fa-stack"> <i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-plus fa-stack-1x"></i>
+		</span>
+	</div>
+	<div class="mount-container"></div>
+</div>

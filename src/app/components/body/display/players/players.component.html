@@ -1,26 +1,41 @@
 <div class="players-header">
-    <p>Players</p>
+	<p>Players</p>
 </div>
-<div class="players-body" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
-    <div class="player-item" *ngFor="let player of players; let playerIdx = index;">
-        <div class="title">
-        	<div class="text">Test nao hee!!!!!!!!!!!!!!!!!!</div>
-        	<div class="buttons">
-        		<div class="button" [ngSwitch]="player.is_connected" (click)="connectPlayer(playerIdx)">
-        			<div *ngSwitchCase="false">Connect
-        			<i class="fa fa-bar-chart" aria-hidden="true"></i></div>
-        			<div *ngSwitchCase="true">Disconnect
-        			<i class="fa fa-dedent" aria-hidden="true"></i></div>
-        		</div>
-        		<div class="button" (click)="player.show_popup=!player.show_popup" [ngClass]="{'active':player.show_popup}" *ngIf="player.is_connected">
-        			<i class="fa fa-th" aria-hidden="true"></i>
-        			<i class="fa" [ngClass]="{'fa-angle-down': !player.show_popup, 'fa-angle-up': player.show_popup}" aria-hidden="true"></i>
-        			<app-panes-list-popup [player]="player" (activePanesEvent)="onActivePanes($event)"></app-panes-list-popup>
-        		</div>
-        	</div>
-        </div>
-        <div class="panes" *ngIf="player.is_connected">
-            <div *ngFor="let pane of player.panes" [style.width]="pane.layout.w" [style.height]="pane.layout.h" [style.top]="pane.layout.t" [style.left]="pane.layout.l" class="panes-item"></div>
-        </div>
-    </div>
+<div class="players-body" malihu-scrollbar
+	[scrollbarOptions]="scrollbarOptions">
+	<div class="player-item"
+		*ngFor="let player of players; let playerIdx = index;">
+		<div class="title">
+			<div class="text">Test nao hee!!!!!!!!!!!!!!!!!!</div>
+			<div class="buttons">
+				<div class="button" [ngSwitch]="player.is_connected"
+					(click)="connectPlayer(playerIdx)">
+					<div *ngSwitchCase="false">
+						Connect <i class="fa fa-bar-chart" aria-hidden="true"></i>
+					</div>
+					<div *ngSwitchCase="true">
+						Disconnect <i class="fa fa-dedent" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="button" (click)="player.show_popup=!player.show_popup"
+					[ngClass]="{'active':player.show_popup}"
+					*ngIf="player.is_connected">
+					<i class="fa fa-th" aria-hidden="true"></i> <i class="fa"
+						[ngClass]="{'fa-angle-down': !player.show_popup, 'fa-angle-up': player.show_popup}"
+						aria-hidden="true"></i>
+					<app-panes-list-popup [player]="player"
+						(activePanesEvent)="onActivePanes($event)"></app-panes-list-popup>
+				</div>
+			</div>
+		</div>
+		<div class="panes" *ngIf="player.is_connected">
+			<div class="panes-item"
+				*ngFor="let pane of player.panes; let idx = index"
+				[style.width]="pane.layout.w" [style.height]="pane.layout.h"
+				[style.top]="pane.layout.t" [style.left]="pane.layout.l">
+
+				<app-pane [player]="player" [index]="idx" (activePaneEvent)="onActivePane($event)"></app-pane>
+			</div>
+		</div>
+	</div>
 </div>
