@@ -6,7 +6,7 @@
 		<div class="title">Live-Streams</div>
 		<div class="content" malihu-scrollbar
 			[scrollbarOptions]="scrollbarOptions">
-			<div *ngFor="let stream of liveStreamList" class="item" mwlDraggable>
+			<div *ngFor="let stream of liveStreamList" class="item">
 				<div>ChannelId: {{stream.channelId}}</div>
 				<div>StreamId: {{stream.streamId}}</div>
 				<div>StreamUri: {{stream.stream_uri}}</div>

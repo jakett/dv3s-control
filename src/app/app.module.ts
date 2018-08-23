@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {MalihuScrollbarModule} from 'ngx-malihu-scrollbar';
-import {DragAndDropModule} from 'angular-draggable-droppable';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
@@ -37,8 +36,7 @@ import {PaneComponent} from './components/body/display/players/pane/pane.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MalihuScrollbarModule.forRoot(),
-    DragAndDropModule.forRoot()
+    MalihuScrollbarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
